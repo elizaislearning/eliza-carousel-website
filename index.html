@@ -15,6 +15,10 @@
   background-color: #FFC7C7;
   color: #393E46;
 }
+body {
+  padding-top: 80px; /* Adjust based on navbar height */
+}
+
 
 h1 {
   font-family: "DM Serif Text", serif;
@@ -33,14 +37,40 @@ h1 {
   color: #8785A2 !important; /* Change text color on hover */
   text-decoration: underline; /* Add underline on hover */
 }
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px; /* Adjust height for better visibility */
+    object-fit: cover; /* Ensures the image fills the space */
+  }
+}
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 35px; /* Smaller buttons */
+    height: 35px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .carousel-control-prev {
+    left: 5px; /* Moves button slightly inward */
+  }
+  .carousel-control-next {
+    right: 5px;
+  }
+}
 
 .carousel-control-prev,
 .carousel-control-next {
-  background-color: #393E46; /* Dark background for buttons */
+  background-color: #FF8383; /* Dark background for buttons */
   border-radius: 50%; /* Makes them circular */
   width: 50px;
   height: 50px;
-  opacity: 0.8; /* Adjust transparency if needed */
+  opacity: 0.5; /* Adjust transparency if needed */
   display: flex;
   align-items: center;
   justify-content: center;
