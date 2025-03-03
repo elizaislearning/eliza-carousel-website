@@ -43,50 +43,6 @@ h1 {
     object-fit: cover; /* Ensures the image fills the space */
   }
 }
-@media (max-width: 768px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 35px; /* Smaller buttons */
-    height: 35px;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .carousel-control-prev {
-    left: 5px; /* Moves button slightly inward */
-  }
-  .carousel-control-next {
-    right: 5px;
-  }
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #FF8383; /* Dark background for buttons */
-  border-radius: 50%; /* Makes them circular */
-  width: 50px;
-  height: 50px;
-  opacity: 0.5; /* Adjust transparency if needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%; /* Ensures vertical centering */
-  transform: translateY(-50%); /* Corrects alignment */
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 1; /* Fully visible on hover */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(18%) sepia(8%) saturate(402%) hue-rotate(168deg) brightness(93%) contrast(90%);
-}
 
 /* Styling for the "My Recent Learnings" section */
 #skills {
@@ -136,14 +92,6 @@ h1 {
             <img src="./resume_img/Car3.png" class="d-block w-100" alt="Errors make me stronger.">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </div>    
 
