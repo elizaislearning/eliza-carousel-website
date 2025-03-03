@@ -15,10 +15,6 @@
   background-color: #FFC7C7;
   color: #393E46;
 }
-body {
-  padding-top: 80px; /* Adjust based on navbar height */
-}
-
 
 h1 {
   font-family: "DM Serif Text", serif;
@@ -37,19 +33,47 @@ h1 {
   color: #8785A2 !important; /* Change text color on hover */
   text-decoration: underline; /* Add underline on hover */
 }
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 250px; /* Adjust height for better visibility */
-    object-fit: cover; /* Ensures the image fills the space */
-  }
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #393E46; /* Dark background for buttons */
+  border-radius: 50%; /* Makes them circular */
+  width: 50px;
+  height: 50px;
+  opacity: 0.8; /* Adjust transparency if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%; /* Ensures vertical centering */
+  transform: translateY(-50%); /* Corrects alignment */
 }
 
-/* Styling for the "My Recent Learnings" section */
-#skills {
-  background-color: #FFF5E4; /* Soft purple-blue background */
-  color: #393E46; /* Text color to match your theme */
-  padding: 50px 0; /* Adds spacing for better layout */
-  text-align: center;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(18%) sepia(8%) saturate(402%) hue-rotate(168deg) brightness(93%) contrast(90%);
+}
+
+.gradient-background {
+  background: linear-gradient(-45deg,#FFDAB3, #FFF6DA, #9F8383);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
   </style>
@@ -92,6 +116,14 @@ h1 {
             <img src="./resume_img/Car3.png" class="d-block w-100" alt="Errors make me stronger.">
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>    
 
@@ -118,31 +150,31 @@ h1 {
     </div>
     
 
-    <div id="skills" class="px-4 pt-5 pb-5 my-5 text-center border-bottom" style="background-color: #DCD6F7;">
-        <h1 class="display-4 fw-bold text-body-emphasis mb-4">My Recent Learnings</h1>
-    
-        <div class="col-lg-8 mx-auto"> <!-- Made it wider for better readability -->
-            <div class="mb-5">
-                <p class="lead fw-semibold">Principles of Graphic Design</p>
-                <p class="text-muted">University of the Philippines Open University (Feb 2025)</p>
-            </div>
-    
-            <div class="mb-5">
-                <p class="lead fw-semibold">Digital Product Management: From Strategy to Launch</p>
-                <p class="text-muted">National University of Singapore (Nov 2024)</p>
-            </div>
-    
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">    
-                <a href="https://nusingapore.credential.getsmarter.com/705d7784-ab0c-4103-bfbe-199ab5fbc71e" 
-                   class="btn btn-outline-secondary btn-lg px-4" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                  View Credential
-                </a>
-              </div>              
+    <div class="px-4 pt-5 pb-5 my-5 text-center border-bottom gradient-background">
+      <h1 class="display-4 fw-bold text-body-emphasis mb-4">My Recent Learnings</h1>
+  
+      <div class="col-lg-8 mx-auto"> <!-- Made it wider for better readability -->
+          <div class="mb-5">
+              <p class="lead fw-semibold">Principles of Graphic Design</p>
+              <p class="text-muted">University of the Philippines Open University (Feb 2025)</p>
           </div>
-        </div>
+  
+          <div class="mb-5">
+              <p class="lead fw-semibold">Digital Product Management: From Strategy to Launch</p>
+              <p class="text-muted">National University of Singapore (Nov 2024)</p>
+          </div>
+  
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">    
+              <a href="https://nusingapore.credential.getsmarter.com/705d7784-ab0c-4103-bfbe-199ab5fbc71e" 
+                 class="btn btn-outline-secondary btn-lg px-4" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                View Credential
+              </a>
+          </div>              
       </div>
+  </div>
+  
     
       <div id="contact" class="px-4 pt-5 pb-5 my-5 text-center border-bottom" style="background-color: #FFE3E1;">
         <h1 class="display-4 fw-bold text-body-emphasis">Contact Me!</h1>
